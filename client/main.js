@@ -20,4 +20,27 @@ const getFortune = () => {
     alert(data);
   })
   };
-  fortuneBtn.addEventListener('click', getFortune )
+  fortuneBtn.addEventListener('click', getFortune );
+
+  const misfortuneBtn = document.getElementById("misfortuneButton")
+
+  const getMisFortune = () => {
+    axios.get("http://localhost:4000/api/fortune/")
+    .then(res => {
+      const data = res.data;
+      alert(data);
+    })
+  };
+  misfortuneBtn.addEventListener('click', getMisFortune);
+
+ 
+  const loveBtn = document.getElementById("loveButton")
+
+  const getLove = () => {
+    axios.get("http://localhost:4000/api/fortune/")
+  .then(res => {
+    const data = res.data;
+    alert(data);
+  })
+  };
+  loveBtn.addEventListener('click', getLove );
