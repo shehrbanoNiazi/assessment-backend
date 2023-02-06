@@ -22,5 +22,26 @@ module.exports = {
 
         res.status(200).send(randomFortune); 
 
-    }
+    },
+
+    getMisFortune: (req, res) => {
+        const misfortune = ["you will stub you toe", "you will step on water with socks on", "you will lose your phoen charger","you will get a splinter"];
+    
+        let randomIndex = Math.floor(Math.random() * misfortune.length);
+    
+        let randomMisfortune = misfortune[randomIndex];
+
+        res.status(200).send(randomMisfortune); 
+
+},
+getLove: (req, res) => {
+    const love = ["one year from now","never","tommorrow", "when you are 50"];
+
+    let randomIndex = Math.floor(Math.random() * love.length);
+
+    let randomLove = love[randomIndex];
+
+    res.status(200).send(randomLove);
+
+}
 }
